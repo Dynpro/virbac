@@ -1,6 +1,6 @@
 view: vw_medical {
   label: "Medical records"
-  sql_table_name: "SCH_KAIROS_UNITY_POINT"."VW_MEDICAL"
+  sql_table_name: "SCH_VIRBAC"."VW_MEDICAL"
     ;;
 
   dimension: 2012_chronic {

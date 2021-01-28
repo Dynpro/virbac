@@ -1,6 +1,6 @@
 view: vw_pharmacy {
   label: "Pharmacy records"
-  sql_table_name: "SCH_KAIROS_UNITY_POINT"."VW_PHARMACY"
+  sql_table_name: "SCH_VIRBAC"."VW_PHARMACY"
     ;;
 
   dimension: ace_inhibitor {
