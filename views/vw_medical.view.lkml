@@ -129,7 +129,7 @@ view: vw_medical {
     convert_tz: no
     datatype: date
     label: "PAID"
-    drill_fields: [diagnosis_year, diagnosis_quarter, diagnosis_month, diagnosis_raw]
+    drill_fields: [paid_year, paid_quarter, paid_month, paid_raw]
     sql: ${TABLE}."PAID_DATE" ;;
   }
 
