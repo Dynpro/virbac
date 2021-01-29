@@ -10,4 +10,6 @@ datagroup: virbac_default_datagroup {
 
 persist_with: virbac_default_datagroup
 
-explore: vw_medical {}
+explore: vw_medical {
+  label: "MEDICAL Records"
+}

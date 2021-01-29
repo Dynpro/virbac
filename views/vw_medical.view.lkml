@@ -1,7 +1,9 @@
 view: vw_medical {
   label: "Medical records"
-  sql_table_name: "SCH_VIRBAC"."VW_MEDICAL"
-    ;;
+  derived_table: {
+    sql:  select * from "SCH_VIRBAC"."VW_MEDICAL"
+          WHERE "PROCEDURE_GROUP_NAME" IS NOT NULL ;;
+    }
 
   dimension: 2012_chronic {
     type: string
@@ -550,6 +552,12 @@ view: vw_medical {
     type: string
     label: "CATASTROPHIC/NON-CATASTROPHIC CLAIM"
     sql: ${TABLE}."CATASTROPHIC_FLAG" ;;
+  }
+
+  dimension: PROCEDURE_GROUP_NAME {
+    type: string
+    drill_fields: [primary_procedure_code, procedure_description]
+    sql: ${TABLE}."PROCEDURE_GROUP_NAME" ;;
   }
 
 }
