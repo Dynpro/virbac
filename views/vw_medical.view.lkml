@@ -116,6 +116,23 @@ view: vw_medical {
     sql: ${TABLE}."DIAGNOSIS_DATE" ;;
   }
 
+  dimension_group: paid {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    label: "PAID"
+    drill_fields: [diagnosis_year, diagnosis_quarter, diagnosis_month, diagnosis_raw]
+    sql: ${TABLE}."PAID_DATE" ;;
+  }
+
   dimension: disease_group {
     type: string
     hidden: yes
